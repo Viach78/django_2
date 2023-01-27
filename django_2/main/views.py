@@ -7,4 +7,4 @@ def index(request):
     return HttpResponse('<h2>Hello</h2>')
 
 def new(request):
-    return HttpResponse('<h1>New page</h1>')
+    return render(request, 'main/new_page.html')
