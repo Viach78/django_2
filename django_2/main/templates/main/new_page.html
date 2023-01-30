@@ -25,5 +25,12 @@
     </nav>
 </div>
 </body>
-    <img src="https://kartinkin.net/uploads/posts/2021-07/1625860857_4-kartinkin-com-p-oboi-na-temu-programmirovanie-krasivie-6.jpg" class="img-fluid my-3 height: 300;" alt="...">
+<div class="container">
+    {% for elem in data %}
+    <div class="col text-center">
+        <h5 class="row d-block"> {{ elem.title }} </h5>
+        <a href="#" class="btn btn-info">Подробнее</a>
+    </div>
+    {% endfor %}
+</div>
 </html>
