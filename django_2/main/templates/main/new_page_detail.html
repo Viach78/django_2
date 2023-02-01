@@ -25,12 +25,11 @@
     </nav>
 </div>
 </body>
-<div class="container">
-    {% for elem in data %}
+<div class="features text-center">
+    <div class="display-4 fw-bold">{{ blog.title }}</div><br>
     <div class="col text-center">
-        <h5 class="row d-block"> {{ elem.title }} </h5>
-        <a href="{% url 'new_page_detail' elem.id %}" class="btn btn-info">Подробнее</a>
+        <h5 class="row d-block mx-5"> {{ blog.text }} </h5>
+        <a href="{% url 'new_page' %}" class="btn btn-info">Назад</a><br><br>
     </div>
-    {% endfor %}
 </div>
 </html>
