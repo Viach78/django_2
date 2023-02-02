@@ -17,7 +17,7 @@ class TaskForm(ModelForm):
             }),
             "data": DateTimeInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Дата'
+                'placeholder': 'Дата и время'
             }),
         }
 

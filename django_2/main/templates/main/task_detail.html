@@ -1,0 +1,12 @@
+{% extends 'main/index.html' %}
+
+{% block title %}Задача{% endblock %}
+{% block content %}
+<div class="features text-center">
+    <div class="display-4 fw-bold">{{ task.title }}</div><br>
+    <div class="col text-center">
+        <h5 class="row d-block mx-5"> {{ task.text }} </h5>
+        <a href="{% url 'index' %}" class="btn btn-info">Назад</a><br><br>
+    </div>
+</div>
+{% endblock %}

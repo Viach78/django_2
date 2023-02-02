@@ -26,5 +26,18 @@
     </nav>
 </div>
 </body>
-<main>{% block content %}{% endblock %}</main>
+<main>
+    {% block content %}
+        <div class="container text-center">
+            <p class="display-4 text-info fw-bold">Список Задач</p>
+            {% for elem in task_all %}
+            <div class="col text-center">
+                <h5 class="row d-block"> {{ elem.title }} </h5>
+                <h6 class="row d-block"> {{ elem.data }} </h6>
+                <a href="{% url 'task_detail' elem.id %}" class="btn btn-info">Подробнее</a>
+            </div>
+            {% endfor %}
+        </div>
+    {% endblock %}
+</main>
 </html>
