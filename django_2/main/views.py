@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Blog
 from django.views.generic import DetailView
-from django.db import models
+from .forms import TaskForm
 
 # Create your views here.
 
@@ -20,3 +20,9 @@ class BlogDetailView(DetailView):
     template_name = 'main/new_page_detail.html'
     context_object_name = 'blog'
 
+def task(request):
+    form = TaskForm()
+    data = {
+        'form': form
+    }
+    return render(request, 'main/task.html', data)

@@ -14,3 +14,15 @@ class Blog(models.Model):
     class Meta():
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
+
+class Task(models.Model):
+    title = models.CharField('Название ', max_length=100)
+    text = models.TextField('Текст задачи')
+    data = models.DateTimeField('Дата публикации')
+
+    def __str__(self):
+        return self.title
+
+    class Meta():
+        verbose_name = 'Задача'
+        verbose_name_plural = 'Задачи'

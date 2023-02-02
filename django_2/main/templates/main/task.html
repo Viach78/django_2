@@ -1,0 +1,17 @@
+{% extends 'main/index.html' %}
+
+{% block title %}Задачи{% endblock %}
+
+{% block content %}
+    <div class="features text-center">
+        <h2>Добавление задачи</h2>
+        <form method="post" style="margin-left: 20%; margin-right: 20%;;">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.text }}<br>
+            {{ form.data }}<br>
+            <button class="btn btn-info" type="submit">Добавить задачу</button>
+        </form>
+
+    </div>
+{% endblock %}
